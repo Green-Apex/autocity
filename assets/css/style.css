@@ -12,12 +12,13 @@
 @import "financeDeals.css";          /*For Finance Deals Page*/
 @import "etalage.css";          /*For Used car detail page zoomer image Page*/
 @import "carDetail.css";          /*For Used car detail page*/
+@import "bootstrap-select.min.css";          /*For Used car detail page*/
 
 html, body {
     margin: 0;
     padding: 0;
     font-family: 'Merriweather', serif;
-    background-color: #F7F8E6;
+
     color: #333;
 }
 

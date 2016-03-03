@@ -1,29 +1,11 @@
+<!--
 <div class="menubar">
     <div class="container">
         <div class="row"></div>
        <a href="#/home"><img src="assets/images/autoCity.png"/> </a>
         <ul>
             <li><a href="#/home">Home</a></li>
-         <!--   <li>Used Vehicles
-                <div class="megamenu">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <h3><a href="#/carList?criteria=&endIndex=100&max=&min=&sort=&startIndex=0&status=&type=Car"><img src="assets/images/car.png "></a></h3>
-                                <p>Cars</p>
-                            </div>
-                            <div class="col-md-4">
-                                <h3><a href="#/carList" ><img src="assets/images/van.png"></a></h3>
-                                <p>Van</p>
-                            </div>
-                            <div class="col-md-4">
-                                <h3><a href="#/carList" ><img src="assets/images/jeep.png"></a></h3>
-                                <p>Jeep</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>-->
+
             <li><a href="#/carList?criteria=&endIndex=100&max=&min=&sort=&startIndex=0&status=&type=">Used Vehicles</a>
                 <div class="megamenu">
                     <div class="container">
@@ -52,3 +34,53 @@
         </ul>
     </div>
 </div>
+-->
+
+<!-- Navigation -->
+<nav class="navbar navbar-custom navbar-fixed-top menubar" role="navigation" id="main">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand page-scroll" href="#page-top">
+                <a href="#/home"><img src="assets/images/autoCity.png"/> </a>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+            <ul class=" navbar-nav">
+                <li><a href="#/home">Home</a></li>
+
+                <li><a href="#/carList?criteria=&endIndex=100&max=&min=&sort=&startIndex=0&status=&type=">Used Vehicles</a>
+                    <div class="megamenu">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h3>USED CARS</h3>
+                                    <hr>
+                                    <p><a href="#/carList?criteria=&endIndex=100&max=&min=&sort=&startIndex=0&status=&type=Van">Van</a></p>
+                                    <p><a href="#/carList?criteria=&endIndex=100&max=&min=&sort=&startIndex=0&status=&type=Jeep"> Jeep</a></p>
+                                    <p><a href="#/carList?criteria=&endIndex=100&max=&min=&sort=&startIndex=0&status=&type=Car"> Cars</a></p>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <h3><a href="#/carList?criteria=&endIndex=100&max=&min=&sort=&startIndex=0&status=&type=Car"><img src="assets/images/car.png "></a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#/finance">Finance</a></li>
+                <li><a href="#/financeDeals">Car Finance Deals</a></li>
+                <li><a href="#/partExchange">Part Exchange</a></li>
+                <li><a href="#/renting">Renting/Hire</a></li>
+                <li><a href="#/warranty">Warranty</a></li>
+                <li><a href="#/contactUs">Contact Us</a></li>
+                <li><a href=""></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>

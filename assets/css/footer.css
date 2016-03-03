@@ -5,8 +5,8 @@ footer p > a {
     color: black !important;
 }
 .footerWrapper{
-    background: rgba(255, 255,255, 1);
-    padding: 10px 15px;
+    background-color:beige ;
+    padding: 10px 111px;
     /*box-shadow: 5px 5px 10px rgba(0,0,0,0.3);*/
 }
 

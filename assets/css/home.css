@@ -1,12 +1,16 @@
-.homeWrapper {
-    display: block;
+
+.intro {
+    display: table;
     width: 100%;
-    min-height: 500px;
-    margin-top: -45px;
-    background: url(../images/header.jpg) no-repeat center;
-
+    padding: 100px 0;
+    text-align: center;
+    background: url(../images/header.jpg) no-repeat bottom center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    height: 599px;
 }
-
 .homeWrapperContent {
     display: block;
     padding: 10px 15px;
@@ -60,6 +64,7 @@
     color: lightcyan !important;
     text-align: center;
 }
+
 /*---------------------------------------------------------------- Responsive*/
 
 @media screen and (max-width: 480px){

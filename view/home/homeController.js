@@ -6,4 +6,5 @@ autoscityControllers.controller('homeController', ['$scope', '$window',
         $("#loader").fadeOut();
 
 
+
     }]);
