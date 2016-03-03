@@ -1,0 +1,63 @@
+.homeWrapper {
+    display: block;
+    width: 100%;
+    min-height: 300px;
+
+}
+
+.homeWrapperContent {
+    display: block;
+    padding: 10px 15px;
+}
+
+.carInfoFormleft{
+    background:rgba(211, 175, 142, 0.1);
+    padding: 10px;
+
+}
+.carInfoFormright{
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+
+}
+.carInfoFormright p{
+    font-size: 14px;
+    line-height: 30px;
+}
+
+#carInfoForm{
+    padding: 5px;
+}
+
+#carInfoForm div{
+    display: inline-block;
+    width: 11.5%;
+    margin: 0 3px;
+}
+.panel-body > p  a{
+    color: darkred !important;
+}
+.selectBox{
+    appearance: none;-webkite-appearance: none;-moz-appearance: none;-o-appearance: none;-ms-appearance: none;
+    background: #f5f5f5 url('image-path') no-repeat right center;
+    border: 1px solid #eeeeee;
+    width:300px;
+    height:40px;
+    padding:10px;
+}
+/*---------------------------------------------------------------- Responsive*/
+
+@media screen and (max-width: 480px){
+    .carInfoForm{
+        margin: 15px 0;
+    }
+
+    .homeWrapperContent {
+        padding: 0;
+        margin: 15px 0;
+    }
+    .homeWrapperContent p{
+        margin: 15px 0;
+        padding: 0 15px;
+    }
+}

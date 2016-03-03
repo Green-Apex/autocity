@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--For Responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--For SEO-->
+    <meta name="Description" content="I wouldn't waste 2 minutes optimising my keyword meta tags for Google, but Google tells us to pay attention to meta descriptions." />
+    <meta name="Keywords" content="SEO, search engine optimisation, optimization" />
+    <meta name="robots" content="index, nofollow" />
+    <title>Autos City - Dedicated to make your day everyday</title>
+    <!--For Favicon-->
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <!--stylesheet-->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/select.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <!--Jquery and Angular js-->
+    <script type="application/javascript" src="assets/js/jquery-1.11.1.min.js"></script>
+    <script type="application/javascript" src="angularLib/angular.min.js"></script>
+    <script type="application/javascript" src="angularLib/angular-route.min.js"></script>
+    <script type="application/javascript" src="angularLib/angular-resource.min.js"></script>
+    <script type="application/javascript" src="angularLib/angular-drag-and-drop-lists.js"></script>
+    <script type="application/javascript" src="angularLib/angular-animate.min.js"></script>
+    <script type="application/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="application/javascript" src="assets/js/jquery.etalage.min.js"></script>
+    <script type="application/javascript" src="assets/js/moment.js"></script>
+    <!--controllers-->
+    <script type="application/javascript" src="angularLib/mainController.js"></script>
+    <script type="application/javascript" src="view/home/homeController.js"></script>
+    <script type="application/javascript" src="view/login/loginController.js"></script>
+    <script type="application/javascript" src="view/cars/carListController.js"></script>
+    <script type="application/javascript" src="view/contactUs/contactUsController.js"></script>
+    <script type="application/javascript" src="view/finance/financeController.js"></script>
+    <script type="application/javascript" src="view/finance/financeDealsController.js"></script>
+    <script type="application/javascript" src="view/finance/partExchangeController.js"></script>
+    <script type="application/javascript" src="view/finance/rentingController.js"></script>
+    <script type="application/javascript" src="view/finance/warrantyController.js"></script>
+    <script type="application/javascript" src="view/cars/carDetailController.js"></script>
+
+    <!--services-->
+    <script type="application/javascript" src="angularLib/mainService.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!--directives-->
+    <script type="application/javascript" src="angularLib/mainDirective.js"></script>
+    <!--fonts-->
+
+</head>
+<body>
+    <div id="loader">
+        <div class="dots-loader cssload-spinner">
+            <div class="cssload-ball cssload-ball-1"></div>
+            <div class="cssload-ball cssload-ball-2"></div>
+            <div class="cssload-ball cssload-ball-3"></div>
+            <div class="cssload-ball cssload-ball-4"></div>
+        </div>
+    </div>
+    <!--<div id="pageWrapper"></div>-->
+
+    <div ng-view=""></div>
+</body>
+</html>

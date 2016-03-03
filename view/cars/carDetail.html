@@ -1,0 +1,116 @@
+<desk-header></desk-header>
+<desk-menubar></desk-menubar>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#etalage').etalage();
+
+    });
+</script>
+<section class="homeWrapperContent">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <ul id="etalage">
+                    <li>
+                        <!-- This is the large (zoomed) image source: -->
+                        <img class="etalage_source_image" src="../../assets/images/car1.jpg"
+                            alt="no img"/>
+                        <img class="etalage_thumb_image" src="assets/images/car1.jpg" alt="no"/>
+                    </li>
+                    <li>
+                        <!-- This is the large (zoomed) image source: -->
+                        <img class="etalage_source_image" src="../../assets/images/car11.jpg"
+                            alt="no img"/>
+                        <img class="etalage_thumb_image" src="assets/images/car11.jpg" alt="no"/>
+                    </li>
+                    <li>
+                        <!-- This is the large (zoomed) image source: -->
+                        <img class="etalage_source_image" src="../../assets/images/car3.jpg"
+                             alt="no img"/>
+                        <img class="etalage_thumb_image" src="assets/images/car3.jpg" alt="no"/>
+                    </li>
+                    <li>
+                        <!-- This is the large (zoomed) image source: -->
+                        <img class="etalage_source_image" src="../../assets/images/car4.jpg"
+                             alt="no img"/>
+                        <img class="etalage_thumb_image" src="assets/images/car4.jpg" alt="no"/>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="col-md-8">
+
+                <h3 class="font_maroon">{{productDetailData.model}} {{productDetailData.productName}}</h3>
+                <hr>
+                <div class="col-md-7">
+                    <label>Price: <span>{{productDetailData.status}}</span></label><br><br>
+                    <label>Condition: <span>{{productDetailData.status}}</span></label><br><br>
+
+                    <label>Details :{{productDetailData.keyFeatures}}</label>
+
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+
+
+                <div class="panel panel-info">
+                    <div class="panel-body">
+                        <table class="table">
+                            <tr>
+                                <td> Make :</td>
+                                <td>{{productDetailData.make}} </td>
+                                <td> Model :</td>
+                                <td>{{productDetailData.model}}</td>
+                            </tr>
+                            <tr>
+                                <td>Key Features :</td>
+                                <td>{{productDetailData.keyFeatures}}</td>
+                                <td>Fuel Type :</td>
+                                <td>{{productDetailData.fuelType}}</td>
+                            </tr>
+                            <tr>
+                                <td> Engine Size :</td>
+                                <td> {{productDetailData.engineSize}}</td>
+                                <td> Mileage :</td>
+                                <td> {{productDetailData.mileage}}</td>
+                            </tr>
+                            <tr>
+                                <td> Type :</td>
+                                <td> {{productDetailData.type}}</td>
+                                <td> Driver Side :</td>
+                                <td> {{productDetailData.driveSide}}</td>
+
+                            </tr>
+                            <tr>
+                                <td> Price :</td>
+                                <td>{{productDetailData.price}} </td>
+                                <td> Doors :</td>
+                                <td> {{productDetailData.doors}}</td>
+                            </tr>
+                            <tr>
+                                <td> Previous Owners :</td>
+                                <td> {{productDetailData.exterior}}</td>
+                                <td> Reg Mark :</td>
+                                <td> {{productDetailData.regMark}}</td>
+                            </tr>
+                            <tr>
+                                <td> Colour :</td>
+                                <td> {{productDetailData.colour}}</td>
+                                <td> Other :</td>
+                                <td> </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</section>
+<desk-footer></desk-footer>
+
+

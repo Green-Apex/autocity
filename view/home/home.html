@@ -1,0 +1,430 @@
+<desk-header xmlns="http://www.w3.org/1999/html"></desk-header>
+<desk-menubar></desk-menubar>
+<section class="homeWrapper">
+    <div class="container">
+        <div class="carInfoForm col-md-4">
+            <h3 class="text-center">Find new & used cars</h3>
+            <!---distance boxes-->
+            <div class="row">
+                <form novalidate>
+
+                    <div class="col-md-12">
+                        <div class="dropdown material_dropdown">
+                            <button class="dropdown-toggle material_dropdown_btn" type="button" id=""
+                                    data-toggle="dropdown" aria-expanded="true">
+                                Distance(select)
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu material_dropdown_menu" role="menu"
+                                aria-labelledby="dropdownMenu1">
+                                <li>
+                                    <input type="checkbox">
+                                    <span> Within 1</span>
+                                </li>
+                                <li>
+                                    <input type="checkbox">
+                                    <span> Within 2</span>
+                                </li>
+                                <li>
+                                    <input type="checkbox">
+                                    <span> Within 3</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="col-md-12">
+                        <div class="dropdown material_dropdown">
+                            <button class="dropdown-toggle material_dropdown_btn" type="button" id="dropdownMenu1"
+                                    data-toggle="dropdown" aria-expanded="true">
+                                Show(select)
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu material_dropdown_menu" role="menu"
+                                aria-labelledby="dropdownMenu1">
+                                <li>
+                                    <input type="checkbox">
+                                    <span> Used</span>
+                                </li>
+                                <li>
+                                    <input type="checkbox">
+                                    <span> Nearly</span>
+                                </li>
+                                <li>
+                                    <input type="checkbox">
+                                    <span> New</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="dropdown material_dropdown">
+                            <button class="dropdown-toggle material_dropdown_btn" type="button" id="dropdownMenu1"
+                                    data-toggle="dropdown" aria-expanded="true">
+                                Make(any)
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu material_dropdown_menu" role="menu"
+                                aria-labelledby="dropdownMenu1">
+                                <li>
+                                    <input type="checkbox">
+                                    <span> Used</span>
+                                </li>
+                                <li>
+                                    <input type="checkbox">
+                                    <span>Nearly</span>
+                                </li>
+                                <li>
+                                    <input type="checkbox">
+                                    <span> New</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="dropdown material_dropdown">
+                            <button class="dropdown-toggle material_dropdown_btn" type="button" id="dropdownMenu1"
+                                    data-toggle="dropdown" aria-expanded="true">
+                                Model(any)
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu material_dropdown_menu" role="menu"
+                                aria-labelledby="dropdownMenu1">
+                                <li>
+                                    <input type="checkbox">
+                                    <span> Used</span>
+                                </li>
+                                <li>
+                                    <input type="checkbox">
+                                    <span> Nearly</span>
+                                </li>
+                                <li>
+                                    <input type="checkbox">
+                                    <span> New</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="dropdown material_dropdown">
+                            <button class="dropdown-toggle material_dropdown_btn" type="button" id=""
+                                    data-toggle="dropdown" aria-expanded="true">
+                                Budgets
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu material_dropdown_menu" role="menu"
+                                aria-labelledby="dropdownMenu1">
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group materail_input_block">
+                            <input type="text" class="form-control materail_input" placeholder="postcode">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <button class="btn btn-default btn-block material_btn material_btn_xs material_btn_info"
+                                type="button"
+                                data-toggle="dropdown">
+                            save
+                        </button>
+                    </div>
+
+
+                </form>
+            </div>
+
+        </div>
+        <div class="col-md-8 clickhere " >
+           <p>Can’t find what you’re looking for? <span> <a href="">Click here</a> </span>to fill our inquiry form</p>
+        </div>
+
+
+    </div>
+</section>
+<section>
+    <div class="container">
+
+        <div class="carInfoFormright col-md-12">
+            <p></p>
+            <p class="text-justify">Welcome to Autos City, your own personal vehicle dealer. With over 3 years
+                combined dealer experience
+                and yours confidence in us, we as Autos City have built a great reputation on providing a courteous
+                and
+                honest services. The business is an independent, family run vehicle business offering first class
+                service in a friendly environment, where the dedicated team take great pride in providing complete
+                customer satisfaction.</p>
+            <p class="text-justify">Our customers appreciate the way we do business, and we believe you will too.
+                For your complete peace of
+                mind we will ensure that the vehicle of your choice has been prepared and presented to exceed the
+                expectations of the most demanding vehicle customer. We are proud to say that Autos City stocks a
+                range
+                of used vehicles that suits your budget and lifestyle.</p>
+            <p class="text-justify"> Our dedicated team take great pride in providing complete customer
+                satisfaction. The team members are
+                also happy to source any vehicles if you cannot find what you're looking for within the current
+                stocklist.</p>
+
+        </div>
+
+
+    </div>
+</section>
+<section class="homeWrapperContent">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="thumbnail">
+                        <a href="#/carDetail?productID={{car.productID}}">
+                            <div class="caption">
+                                <b></b>
+                                <p><i class="fa fa-mobile"></i> WHITE, 6 doors, Manual, Diesel</p>
+                                <p><i class="fa fa-cube"></i> Warranted, VAT Type: Commercial</p>
+                                <p><i class="fa fa-arrow-right"></i> FL07ODM</p>
+                                <p><i class="fa fa-star"></i> Registration Date 07/03/2007</p>
+                            </div>
+                        </a>
+                        <img src="assets/images/FL07-01.jpg" alt="...">
+                    </div>
+                    <div class="panel-body">
+                        <div class="row pad10">
+                            <p>VAUXHALL VIVARO 2.9T 19 CDTI 100 SWB Panel Van</p>
+                            <p>103684 miles,</p>
+                            <p class="pull-left"><b>£3500</b></p>
+                            <p class="pull-right"><a href="" class="font_maroon"> Details <i
+                                    class="fa fa-arrow-right"></i></a></p>
+
+                        </div>
+                    </div>
+                    <div class="maroon"><a href="">Finance This Car From 159 Per Month</a></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="thumbnail">
+                        <a href="">
+                            <div class="caption">
+                                <b></b>
+                                <p><i class="fa fa-mobile"></i> BLUE, 5 doors, Manual, Diesel</p>
+                                <p><i class="fa fa-arrow-right"></i> Warranted, VAT Type: Commercial</p>
+                                <p><i class="fa fa-cube"></i> KE07OBZ</p>
+                                <p><i class="fa fa-star"></i>Registration Date 22/05/2007</p>
+                            </div>
+                        </a>
+                        <img src="assets/images/KE07-05.jpg" alt="..." >
+                    </div>
+                    <div class="panel-body">
+                        <div class="row pad10">
+
+                            <p>FORD TRANSIT 280 22 TDCI 110 MWB M/R Panel Van</p>
+                            <p> 82735 miles</p>
+                            <p class="pull-left"><b>£4100</b></p>
+                            <p class="pull-right"><a href="" class="font_maroon"> Details <i
+                                    class="fa fa-arrow-right"></i></a></p>
+
+                        </div>
+                    </div>
+                    <div class="maroon"><a href="">Finance This Car From 159 Per Month</a></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="thumbnail">
+                        <a href="">
+                            <div class="caption">
+                                <b></b>
+                                <p><i class="fa fa-mobile"></i>BLUE, 5 doors, Manual, Diesel</p>
+                                <p><i class="fa fa-arrow-right"></i> Not warranted, VAT Type: Marginal</p>
+                                <p><i class="fa fa-cube"></i> BJ57MZG</p>
+                            </div>
+                        </a>
+                        <img src="assets/images/BJ07-01.jpg" alt="...">
+                    </div>
+                    <div class="panel-body">
+                        <div class="row pad10">
+                            <p>BMW 118D 20 M SPORT Hatchback </p>
+                            <p> 119974 miles</p>
+                            <p class="pull-left"><b>£5400</b></p>
+                            <p class="pull-right"><a href="" class="font_maroon"> Details <i
+                                    class="fa fa-arrow-right"></i></a></p>
+                        </div>
+                    </div>
+                    <div class="maroon"><a href="">Finance This Car From 159 Per Month</a></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="thumbnail">
+                        <a href="">
+                            <div class="caption">
+                                <b></b>
+                                <p><i class="fa fa-mobile"></i> APOLLO WHITE, 5 doors, Manual, Diesel</p>
+                                <p><i class="fa fa-arrow-right"></i> Warranted, VAT Type:Commercial</p>
+                                <p><i class="fa fa-cube"></i> MJ60 KOH</p>
+                            </div>
+                        </a>
+                        <img src="assets/images/MJ60-01.jpg" alt="...">
+                    </div>
+                    <div class="panel-body">
+                        <div class="row pad10">
+                            <p>RENAULT TRAFIC 2.7T 20 SL27DCI 115 Panel Van </p>
+                            <p>117845 miles</p>
+                            <p class="pull-left"><b>£4325</b></p>
+                            <p class="pull-right"><a href="" class="font_maroon"> Details <i
+                                    class="fa fa-arrow-right"></i></a></p>
+                        </div>
+                    </div>
+                    <div class="maroon"><a href="">Finance This Car From 159 Per Month</a></div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="list-group material_list_group maroon">
+            <li class="list-group-item  maroon text-center"><b>Services</b></li>
+        </ul>
+
+        <div class="row">
+            <div class="col-md-3">
+                <a href="#/finance">
+                    <div class="panel panel-default">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <b>Coming Soon</b>
+
+
+                            </div>
+                            <img src="http://www.hicksvillelibrary.org/images/ComingSoon.png" alt="...">
+                        </div>
+                        <!--  <div class="panel-body">
+                              <div class="row pad10">
+                                  <div class="pull-left">
+                                      <p>Finance</p>
+                                  </div>
+                                  <div class="pull-right">
+                                      <p><span>5,498</span></p>
+
+                                      <p><a href=""> Details <i class="fa fa-arrow-right"></i></a></p>
+                                  </div>
+                              </div>
+                          </div>-->
+                        <div class="maroon">Financing</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#/partExchange">
+                    <div class="panel panel-default">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <b>Coming Soon</b>
+
+                                <!--     <p><i class="fa fa-mobile"></i> maroon, diesel, automatic</p>
+
+                                     <p><i class="fa fa-arrow-right"></i> Sat Nav</p>
+
+                                     <p><i class="fa fa-cube"></i> Leather</p>
+
+                                     <p><i class="fa fa-star"></i> maroontooth</p>-->
+                            </div>
+                            <img src="http://www.hicksvillelibrary.org/images/ComingSoon.png" alt="...">
+                        </div>
+                        <!-- <div class="panel-body">
+                             <div class="row pad10">
+                                 <div class="pull-left">
+                                     <p>WD59(2010)</p>
+
+                                     <p>56,850 miles</p>
+
+                                     <p>500 Fitted Extras!</p>
+                                 </div>
+                                 <div class="pull-right">
+                                     <p><span>5,498</span></p>
+
+                                     <p><a href=""> Details <i class="fa fa-arrow-right"></i></a></p>
+                                 </div>
+                             </div>
+                         </div>-->
+                        <div class="maroon">Part Exchange</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#/warranty">
+                    <div class="panel panel-default">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <b>Coming Soon</b>
+
+                                <!--       <p><i class="fa fa-mobile"></i> maroon, diesel, automatic</p>
+
+                                       <p><i class="fa fa-arrow-right"></i> Sat Nav</p>
+
+                                       <p><i class="fa fa-cube"></i> Leather</p>
+
+                                       <p><i class="fa fa-star"></i> maroontooth</p>-->
+                            </div>
+                            <img src="http://www.hicksvillelibrary.org/images/ComingSoon.png" alt="...">
+                        </div>
+                        <!--   <div class="panel-body">
+                               <div class="row pad10">
+                                   <div class="pull-left">
+                                       <p>WD59(2010)</p>
+
+                                       <p>56,850 miles</p>
+
+                                       <p>500 Fitted Extras!</p>
+                                   </div>
+                                   <div class="pull-right">
+                                       <p><span>5,498</span></p>
+
+                                       <p><a href=""> Details <i class="fa fa-arrow-right"></i></a></p>
+                                   </div>
+                               </div>
+                           </div>-->
+                        <div class="maroon">Warranty</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#/renting">
+                    <div class="panel panel-default">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <b>Coming Soon</b>
+                                <!--   <p><i class="fa fa-mobile"></i> maroon, diesel, automatic</p>
+
+                                   <p><i class="fa fa-arrow-right"></i> Sat Nav</p>
+
+                                   <p><i class="fa fa-cube"></i> Leather</p>
+
+                                   <p><i class="fa fa-star"></i> maroontooth</p>-->
+                            </div>
+                            <img src="http://www.hicksvillelibrary.org/images/ComingSoon.png" alt="...">
+                        </div>
+                        <!-- <div class="panel-body">
+                              <div class="row pad10">
+                                  <div class="pull-left">
+                                      <p>WD59(2010)</p>
+
+                                      <p>56,850 miles</p>
+
+                                      <p>500 Fitted Extras!</p>
+                                  </div>
+                                  <div class="pull-right">
+                                      <p><span>5,498</span></p>
+
+                                      <p><a href=""> Details <i class="fa fa-arrow-right"></i></a></p>
+                                  </div>
+                              </div>
+                          </div>-->
+                        <div class="maroon">Renting/Hire</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<desk-footer></desk-footer>
+

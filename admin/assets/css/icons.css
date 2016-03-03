@@ -1,0 +1,26 @@
+@charset "UTF-8";
+@import "font-awesome.min.css";
+
+
+@font-face {
+  font-family: "minicons-webalys";
+  src:url("../fonts/demoicons/minicons-webalys.eot");
+  src:url("../fonts/demoicons/minicons-webalys.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/demoicons/minicons-webalys.ttf") format("truetype"),
+    url("../fonts/demoicons/minicons-webalys.svg#minicons-webalys") format("svg"),
+    url("../fonts/demoicons/minicons-webalys.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'codropsicons';
+  src: url('../fonts/codropsicons/codropsicons.eot');
+  src: url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/codropsicons/codropsicons.woff') format('woff'),
+  url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
+  url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+}

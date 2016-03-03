@@ -1,0 +1,49 @@
+<desk-header xmlns="http://www.w3.org/1999/html"></desk-header>
+<desk-menubar></desk-menubar>
+
+<br>
+<br>
+<section class="financeWrapperContent container-fluid">
+    <div class="panel panel-success">
+        <div class="panel-heading text-center">Product LIST</div>
+        <div class="panel-body">
+            <table class="table" id="example">
+                <thead>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Model</th>
+                <th>Fuel Type</th>
+                <th>Engine Size</th>
+                <th>Colour</th>
+                <th>avalability</th>
+                <th>Price</th>
+                <th>Edit</th>
+                <th>Delete</th>
+                </thead>
+                <tbody>
+                <tr ng-repeat="productlist in productlist">
+                    <td>{{productlist.productID}}</td>
+                    <td>{{productlist.productName}}</td>
+                    <td>{{productlist.model}}</td>
+                    <td>{{productlist.fuelType}}</td>
+                    <td>{{productlist.engineSize}}</td>
+                    <td>{{productlist.colour}}</td>
+                    <td>{{productlist.avalability}}</td>
+                    <td>{{productlist.price}}</td>
+                    <td>
+                        <a href="#/EditProducts?productID={{productlist.productID}}" class="btn btn-info">Edit</a>
+                    </td>
+                    <td>
+                        <button class="btn btn-warning" ng-click="removeProduc(productlist.productID)">Delete</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<div class="clearfix"></div>
+
+<desk-footer></desk-footer>
+

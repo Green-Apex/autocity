@@ -1,0 +1,110 @@
+header {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 0px 0px 0px 0px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+header .notification {
+    background: #f7ecb5;
+    padding: 5px 0px 0px 0px;
+    /* margin: 0 auto;
+     width: 80%;*/
+}
+
+header .shortcut {
+    background: #F7F8E6;
+    padding: 5px 0px;
+    /* margin: 0 auto;
+     width: 80%;*/
+}
+
+.shortcutButton{
+    display: none;
+}
+
+.shortcut .col-md-6{
+    padding: 0;
+}
+
+.shortcut ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.shortcut ul li{
+    display: inline;
+    padding: 0 5px;
+    border-right: 1px solid #777777;
+    line-height: 1px;
+    color: #737373;
+    font-size: 12px;
+}
+.shortcut ul li:first-child{
+    border-left: none;
+    padding-left: 0;
+}
+
+.shortcut ul li:last-child{
+    border-right: none;
+    padding-right: 0;
+}
+
+header h1 > a, header h1 > img, header h4 > a {
+    color: #ffffff;
+    text-shadow: .1em .1em .2em rgba(0, 0, 0, 0.6);
+}
+.signin
+{
+   padding-top: 18px ;
+
+}
+
+/*---------------------------------------------------------------- Responsive*/
+
+@media screen and (max-width: 480px){
+    .notification p{
+       text-align: center;
+    }
+
+    .shortcutButton{
+        display: block;
+        padding: 10px 0;
+    }
+
+    .shortcut, .menubar{
+        display: none;
+    }
+
+    .shortcut .col-md-6, .shortcut .container{
+        padding: 0px;
+        text-align: center;
+    }
+
+    .shortcut .col-md-6 p{
+        text-align: center;
+    }
+
+    .shortcut .pull-right{
+        float: none !important;
+    }
+
+    .shortcut ul li{
+        width: 100%;
+        display: block;
+        margin: 2px 0px;
+        padding: 15px;
+        text-align: center;
+        border-right: none;
+        border-bottom: 1px solid #777777;
+       height: 30px;
+    }
+
+    .shortcut ul li:first-child{
+        padding: 10px;
+    }
+
+    .shortcut ul li:last-child{
+        padding: 10px;
+    }
+}

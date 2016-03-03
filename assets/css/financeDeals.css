@@ -1,0 +1,44 @@
+
+.financeDealsWrapperContent {
+    display: block;
+    padding: 30px 15px;
+}
+.financeDeals_pad30T
+ {
+     padding-top: 30px;
+ }
+.financeDeals_pad15T
+{
+    padding-top: 15px;
+}
+.financeDeals_hr
+{
+    border-bottom: 1px solid #77C8E9;
+
+}
+.gray
+{
+    background-color: lightgrey;
+}
+.font12
+{
+    font-size: 12px;
+}
+
+.notice {
+    padding: 15px;
+    background-color: #fafafa;
+    border-left: 6px solid #CC3333;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+    box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+}
+.notice-sm {
+    padding: 10px;
+    font-size: 80%;
+}
+.notice-lg {
+    padding: 35px;
+    font-size: 14px;
+}

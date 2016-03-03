@@ -1,0 +1,32 @@
+footer {
+    padding: 0;
+}
+footer p > a {
+    color: black !important;
+}
+.footerWrapper{
+    background: rgba(255, 255,255, 1);
+    padding: 10px 15px;
+    /*box-shadow: 5px 5px 10px rgba(0,0,0,0.3);*/
+}
+
+.footerLastWrapper{
+    background: rgba(38, 38, 38, 0.8);
+    width: 100%;
+    padding: 5px;
+    /*box-shadow: 5px 5px 10px rgba(0,0,0,0.3);*/
+}
+
+.footerWrapper h5>a{
+    color: #21a1d4;
+    font-size: 17px;
+    font-weight: bold;
+}
+.footerWrapper p>a{
+    color: #333;
+    font-size: 14px;
+}
+
+footer h3 > a, footer h1 > img {
+    color: #ffffff;
+}

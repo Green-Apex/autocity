@@ -1,0 +1,241 @@
+.panel-heading .accordion-toggle:after {
+    /* symbol for "opening" panels */
+    font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
+    content: "\e114";    /* adjust as needed, taken from bootstrap.css */
+    float: right;        /* adjust as needed */
+    color: grey;         /* adjust as needed */
+}
+.panel-heading .accordion-toggle.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\e080";    /* adjust as needed, taken from bootstrap.css */
+}
+
+.ribbon {
+    position: absolute;
+    top: 20px;
+    right: -5px;
+    padding: 15px;
+}
+.ribbon-content{
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    background: transparent;
+}
+.ribbon.base {
+    background: #3DAEDB;
+    opacity: 0.75;
+    color: #fff;
+    border-right: 5px solid #8bc4ea;
+}
+.ribbon.light {
+    background: #ecf0f1;
+    color: #2c3e50;
+    border-right: 5px solid #dde4e6;
+}
+.ribbon:before, .ribbon:after {
+    content: '';
+    position: absolute;
+    left: -9px;
+    border-left: 10px solid transparent;
+}
+.ribbon.orange {
+    background: #ff8a3c;
+    color: #fff;
+    border-right: 5px solid #ffc7a2;
+    opacity: 0.75;
+}
+.ribbon.yellow {
+     background: #ffd800;
+     color: #fff;
+     border-right: 5px solid #ffe866;
+ }
+.ribbon:before, .ribbon:after {
+    content: '';
+    position: absolute;
+    left: -9px;
+    border-left: 10px solid transparent;
+}
+.ribbon:before {
+    top: 0;
+}
+.ribbon:after {
+    bottom: 0;
+}
+.ribbon.base:before {
+    border-top: 27px solid #3498db;
+}
+.ribbon.base:after {
+    border-bottom: 27px solid #3498db;
+}
+.ribbon.light:before {
+    border-top: 27px solid #ecf0f1;
+}
+.ribbon.light:after {
+    border-bottom: 27px solid #ecf0f1;
+}
+.ribbon.dark:before {
+    border-top: 27px solid #131313;
+}
+.ribbon.dark:after {
+    border-bottom: 27px solid #131313;
+}
+.ribbon.base-alt:before {
+    border-top: 27px solid #9cd70e;
+}
+.ribbon.base-alt:after {
+    border-bottom: 27px solid #9cd70e;
+}
+.ribbon.red:before {
+    border-top: 27px solid #e91b23;
+}
+.ribbon.red:after {
+    border-bottom: 27px solid #e91b23;
+}
+.ribbon.orange:before {
+    border-top: 27px solid #ff8a3c;
+}
+.ribbon.orange:after {
+    border-bottom: 27px solid #ff8a3c;
+}
+.ribbon.yellow:before {
+    border-top: 27px solid #ffd800;
+}
+.ribbon.yellow:after {
+    border-bottom: 27px solid #ffd800;
+}
+.ribbon span {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.post-list {
+    position: relative;
+    padding: 5px 0;
+}
+
+.post-list .picture {
+    max-width: 400px;
+    overflow: hidden;
+    height: auto;
+    border-radius: 6px;
+}
+
+.post-list .label{
+    font-weight:normal;
+}
+
+.post-list .picture {
+    max-width: 210px;
+}
+
+.post-list .picture img {
+    width: 100%;
+}
+
+.post-list h4 {
+    font-size: 20px;
+}
+
+.post-list h5 {
+    color: #888;
+}
+
+.post-list p {
+    float: left;
+}
+
+.post-list:after {
+    height: 1px;
+    background: #EEEEEE;
+    width: 65%;
+    bottom: 0;
+    right: 0;
+    content: "";
+    display: block;
+    position: absolute;
+}
+
+.post-list .btn-download {
+    margin-top: 45px;
+}
+
+.btn-info1 {
+    color: #87261D;
+    border-color: #87261D;
+}
+.btn-info1:hover {
+    color: #87261D !important;
+    border-color: #F7F8E6;
+    background-color: white !important;
+}
+
+.btn-round1 {
+    border-width: 1px;
+    border-radius: 30px !important;
+    opacity: 0.79;
+    padding: 9px 18px;
+}
+.btn {
+    border-width: 2px;
+
+    font-weight: 400;
+    opacity: 0.8;
+    padding: 7px 16px;
+}
+.font_maroon
+{
+    color: #87261D !important;
+}
+.select {
+    font-size: 15px;
+    position: relative;
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 10px;
+}
+.select select {
+    display: block;
+    padding: 6px;
+    margin-left: 18px;
+    transition: border-color 0.2s;
+    border-bottom: 5px solid #871B1B;
+    border-radius: 5px;
+    background: white;
+    color: #555;
+    width:100%
+
+}
+.select .arr {
+    background: #821919;
+    bottom: 5px;
+    position: absolute;
+    right: -16px;
+    top: -1px;
+    width:31px;
+    pointer-events: none;
+}
+.select .arr:before {
+    content: '';
+    position: absolute;
+    top: 60%;
+    right: 6px;
+    margin-top: -5px;
+    pointer-events: none;
+    border-top: 8px solid #EB5168;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+}
+
+.select .arr:after {
+    content: '';
+    position: absolute;
+    top: 60%;
+    right: 10px;
+    margin-top: -5px;
+    pointer-events: none;
+    border-top: 4px solid #fff;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+}

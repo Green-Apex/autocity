@@ -1,0 +1,102 @@
+.menubar {
+    background-color: #66CCFF;
+    border-bottom: 3px solid #D3AF8E;
+}
+
+.menubar ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.menubar ul li {
+    display: inline;
+    float: left;
+    padding: 11px 12px;
+    border-right: 1px solid #d9edf7;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 46px;
+}
+
+.menubar ul li:first-child {
+    border-left: none;
+    /*padding-left: 0;*/
+}
+
+.menubar ul li:last-child {
+    border-right: none;
+   /* padding-right: 0;*/
+    float: right;
+}
+
+.menubar ul li:hover {
+    color: #D3AF8E;
+    background: #282629;
+}
+
+.menubar ul li .megamenu {
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    background: #D3AF8E;
+    left: 0;
+    margin: 19px 0;
+    z-index: 10;
+    color: white;
+    padding: 10px;
+    -webkit-transition: visibility .2s ease-in-out;
+    -moz-transition: visibility .2s ease-in-out;
+    -o-transition: visibility .2s ease-in-out;
+    -ms-transition: visibility .2s ease-in-out;
+    transition: visibility .2s ease-in-out;
+}
+
+.megamenu p{
+    font-size: 15px;
+}
+
+.menubar ul li div h3 {
+    color: #69c4e8;
+}
+
+.menubar ul li:hover .megamenu {
+   /* color: #fff;*/
+    visibility: visible;
+    -webkit-transition: visibility .2s ease-in-out;
+    -moz-transition: visibility .2s ease-in-out;
+    -o-transition: visibility .2s ease-in-out;
+    -ms-transition: visibility .2s ease-in-out;
+    transition: visibility .2s ease-in-out;
+
+}
+
+/*---------------------------------------------------------------- Responsive*/
+
+@media screen and (max-width: 480px){
+    .menubar ul li {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #d9edf7;
+        margin-top: 2px;
+    }
+    .menubar ul li:last-child {
+        border-bottom: none;
+        /* padding-right: 0;*/
+        float: right;
+    }
+
+    .menubar ul li:hover{
+        background: none;
+    }
+
+    .megamenu {
+        width: 100%;
+        padding: 0px;
+        display: block;
+        position: relative;
+    }
+
+}
