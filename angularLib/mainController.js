@@ -6,7 +6,7 @@ angular.element(document).ready(function () {
 //module for myApp decide route/controller/service/directive
 var autoscityApp = angular.module('myApp', ['ngRoute', 'myControllers', 'myServices', 'dndLists']);
 
-autoscityApp.constant('webAppConstant', 'http://arpit-pc:8080/CarPortal/');
+autoscityApp.constant('webAppConstant', 'http://52.50.66.67:8080/CarPortal/');
 
 autoscityApp.config(['$routeProvider',
         function ($routeProvider) {
