@@ -3,7 +3,7 @@
 autoscityControllers.controller('carListController', ['$scope', '$window', 'getallproducts', 'getFilterByCriteria', '$location',
     function ($scope, $window, getallproducts, getFilterByCriteria, $location) {
 
-        $("#loader").fadeOut();
+        $("#loader").fadeIn();
         $scope.productlist = [];
         $scope.filterList = [];
 
@@ -55,8 +55,15 @@ autoscityControllers.controller('carListController', ['$scope', '$window', 'geta
             /*angular.forEach(response.data, function (value, key) {
              $scope.productlist.push(value);
              });*/
-
-            $scope.productlist = response.data;
+            if(response.message == "Productlist retrived successfully"){
+                $scope.productlist = response.data;
+                $("#loader").fadeOut();
+                $.toaster(response.message, 'success');
+            }
+            else{
+                $("#loader").fadeOut();
+                $.toaster("No Data Available", 'Alert', 'warning');
+            }
         });
 
         getFilterByCriteria.get(function (response) {
@@ -70,15 +77,13 @@ autoscityControllers.controller('carListController', ['$scope', '$window', 'geta
                 $scope.maxPrice = response.data.maxPrice;
                 $scope.minPrice = response.data.minPrice;
             }
-            //alert(JSON.stringify($scope.ff));
         });
 
         $scope.GetValue = function (value, value2) {
 
-
             //$location.search("criteria=model:"+value+"&endIndex="+$scope.endIndex+"&max="+$scope.max+"&min="+$scope.min+"&sort="+$scope.sort+"&startIndex="+$scope.startIndex+"&status="+$scope.status+"&type=");
-            console.log(value);
-            console.log(value2);
+            /*console.log(value);
+            console.log(value2);*/
 
             if (value2) {
                 $location.search("criteria=" + $scope.criteria + "&endIndex=" + $scope.endIndex + "&max=" + value2 + "&min=" + value + "&sort=" + $scope.sort + "&startIndex=" + $scope.startIndex + "&status=" + $scope.status + "&type=");
