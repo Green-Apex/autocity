@@ -41,7 +41,6 @@ autoscityControllers.controller('carListController', ['$scope', '$window', 'geta
             $scope.minPrice = $scope.min;
         }
 
-
         getallproducts.get({
             criteria: $scope.criteria,
             endIndex: $scope.endIndex,

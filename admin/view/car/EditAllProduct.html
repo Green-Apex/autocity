@@ -10,6 +10,7 @@
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="productName">Product Name</label>
                     <div class="col-md-8">
+                        <input type="hidden" ng-model="productID"/>
                         <input id="productName" name="productName" ng-model="productName" placeholder="Product Name" class="form-control input-md" required="" type="text">
                     </div>
                 </div>
@@ -280,7 +281,7 @@
         </fieldset>
         <!-- Button (Double) -->
         <div class=" col-md-6 col-md-offset-6">
-            <button id="button1id" name="button1id" class="btn btn-success" ng-click="inserCar()">Save</button>
+            <button id="button1id" name="button1id" class="btn btn-success" ng-click="editCar()">Save</button>
             <button id="button2id" name="button2id" class="btn btn-danger">Cancel</button>
         </div>
         <div class="clearfix"></div>

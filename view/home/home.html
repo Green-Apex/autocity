@@ -7,9 +7,26 @@
                 <div class="carInfoForm col-md-4">
                     <h3 class="text-center">Find new & used cars</h3>
                     <div class="row">
-                        <form novalidate>
-
-                            <div class="col-md-12">
+                        <form novalidate name="modelFilter">
+                            <div>
+                                <h4 class="text-center">FIND MAKE / MODEL</h4>
+                                <div class="panel-body">
+                                    <select class="select" name="filterlist" ng-model="filterlist" ng-options="y for y in filterData.model" required>
+                                    </select>
+                                </div>
+                                <h4 class="text-center">VEHICLE PRICE</h4>
+                                <div class="panel-body">
+                                    <div class="form-group">
+                                        <input class="form-control"  ng-model="minPrice" name="minPrice" type="text" placeholder="0" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" ng-model="maxPrice" name="maxPrice" type="text" placeholder="0" required>
+                                    </div>
+                                    <a href="#/carList?criteria=model:{{filterlist}}&endIndex=100&max={{maxPrice}}&min={{minPrice}}&sort=&startIndex=0&status=&type=" class="btn btn-default btn-block material_btn material_btn_info" ng-hide="modelFilter.$invalid">Go</a>
+                                </div>
+                            </div>
+                            </form>
+                           <!-- <div class="col-md-12">
                                 <div class="form-group">
                                     <div class="dropdown material_dropdown">
                                         <button class="dropdown-toggle material_dropdown_btn" type="button" id=""
@@ -124,7 +141,7 @@
                                 <p>Can’t find what you’re looking for? <span><a href=""
                                                                                 style="color:maroon !important;">Click
                                     here</a></span> to fill our inquiry form</p>
-                            </div>
+                            </div>-->
 
 
 

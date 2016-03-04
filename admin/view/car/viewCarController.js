@@ -5,7 +5,6 @@ autoscityControllers.controller('viewCarController', ['$scope', '$window', 'geta
 
         $("#loader").fadeOut();
 
-
         $scope.productlist = [];
 
         var searchObject = $location.search();
@@ -17,7 +16,6 @@ autoscityControllers.controller('viewCarController', ['$scope', '$window', 'geta
         $scope.startIndex = searchObject.startIndex;
         $scope.status = searchObject.status;
         $scope.type = searchObject.type;
-       // getAllData();
 
         getallproducts.get({
             criteria:$scope.criteria,
@@ -29,23 +27,17 @@ autoscityControllers.controller('viewCarController', ['$scope', '$window', 'geta
             status:$scope.status,
             type:$scope.type
         }, function (response) {
-            //alert(JSON.stringify(response));
             angular.forEach(response.data, function (value, key) {
                 $scope.productlist.push(value);
             });
         });
 
-        // remove user
         $scope.removeProduc = function (index) {
-            //alert(JSON.stringify(index));
             $("#loader").fadeIn();
             deleteproduct.save({productID: index}, function (response) {
                     $("#loader").fadeOut();
-                    //getAllData();
+                $.toaster("Deleted Data Successfully", 'Congratulation', 'success');
+                $window.location.href = "#/viewCar?criteria=&endIndex=5000&max=&min=&sort=&startIndex=0&status=&type="
             })
         };
-
-
-
-
     }]);

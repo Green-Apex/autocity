@@ -25,6 +25,22 @@ autoscityServices.factory('getallproducts', ['$resource', 'webAppConstant',
         });
     }]);
 
+autoscityServices.factory('detailProduct', ['$resource','webAppConstant',
+    function($resource,webAppConstant){
+
+        return $resource(webAppConstant + 'product/'+':verb', {verb:'getproductbyid', productID:'@productID'}, {
+            query: { method: "GET"}
+        });
+
+    }]);
+
+autoscityServices.factory('updateproduct', ['$resource', 'webAppConstant',
+    function ($resource, webAppConstant) {
+        return $resource(webAppConstant + 'product/:verb', {verb: 'updateproduct', productID:'@productID'}, {
+            query: {method: "Post"}
+        });
+    }]);
+
 autoscityServices.factory('deleteproduct', ['$resource', 'webAppConstant',
     function ($resource, webAppConstant) {
         return $resource(webAppConstant + 'product/:verb', {verb: 'deleteproduct', productID:'@productID'}, {
