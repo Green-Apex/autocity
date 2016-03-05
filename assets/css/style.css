@@ -126,6 +126,41 @@ ol, ul{
 {
     padding-top: 0px !important;
 }
+.psliderimage {
 
-font
+    display: table;
+    width: 100%;
+    padding: 100px 0;
+    text-align: center;
+    background: url(../images/partexchange.jpg) no-repeat bottom center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    height: 599px;
+}
+.resliderimage {
+    display: table;
+    width: 100%;
+    padding: 100px 0;
+    text-align: center;
+    background: url(../images/renting.jpg) no-repeat bottom center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    height: 499px;
+}
+.wsliderimage {
+    display: table;
+    width: 100%;
+    padding: 100px 0;
+    text-align: center;
+    background: url(../images/warranty.jpg) no-repeat bottom center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    height: 499px;
+}
 
