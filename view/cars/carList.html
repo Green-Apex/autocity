@@ -36,7 +36,7 @@
                                 <div class="row" ng-repeat="car in productlist">
                                     <div class="col-md-4">
                                         <div class="thumbnail">
-                                            <a href="#/carDetail">
+                                            <a href="#/carDetail?productID={{car.productID}}">
                                                 <div class="caption">
                                                     <b></b>
                                                     <p><i class="fa fa-mobile"></i> {{car.colour}}, {{car.doors}} doors, {{car.transmission}},
@@ -54,7 +54,7 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <h4>
-                                            <a href="#/carDetail" class="username font_maroon">{{car.model}},{{car.productName}}</a>
+                                            <a href="#/carDetail?productID={{car.productID}}" class="username font_maroon">{{car.model}},{{car.productName}}</a>
                                             <label class="label maroon">#{{car.type}}</label>
                                             <label class="label maroon">#{{car.productName}}</label>
                                         </h4>

@@ -16,7 +16,7 @@ autoscityControllers.controller('viewCarController', ['$scope', '$window', 'geta
         $scope.startIndex = searchObject.startIndex;
         $scope.status = searchObject.status;
         $scope.type = searchObject.type;
-
+        $scope.productID = searchObject.productID;
         getallproducts.get({
             criteria:$scope.criteria,
             endIndex:$scope.endIndex,
@@ -61,14 +61,10 @@ autoscityControllers.controller('viewCarController', ['$scope', '$window', 'geta
             });
         });
 
-        $scope.removeProduc = function (index) {
-            $("#loader").fadeIn();
-            deleteproduct.save({productID: index}, function (response) {
-                    $("#loader").fadeOut();
-                $.toaster("Deleted Data Successfully", 'Congratulation', 'success');
-                $window.location.href = "#/viewCar?criteria=&endIndex=5000&max=&min=&sort=&startIndex=0&status=&type="
-            })
-        };
+        deleteproduct.save({productID: $scope.productID}, function (response) {
+            $.toaster("Deleted Data Successfully", 'Congratulation', 'success');
+            $window.location.href = "#/viewCar?criteria=&endIndex=5000&max=&min=&sort=&startIndex=0&status=&type="
+        });
 
         $scope.futureCar = function (productID,visible){
             var falg = $scope.productlist;

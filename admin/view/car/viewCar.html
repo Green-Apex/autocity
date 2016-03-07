@@ -34,7 +34,7 @@
                         <a href="#/EditProducts?productID={{productlist.productID}}" class="btn btn-info">Edit</a>
                     </td>
                     <td>
-                        <button class="btn btn-warning" ng-click="removeProduc(productlist.productID)">Delete</button>
+                        <a class="btn btn-warning"  href="#/viewCar?productID={{productlist.productID}}">Delete</a>
                     </td>
                     <td>
                         <button class="btn btn-warning" ng-click="futureCar(productlist.productID,productlist.visible)">{{productlist.visible}}</button>

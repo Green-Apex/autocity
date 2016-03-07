@@ -4,6 +4,7 @@ autoscityControllers.controller('insertCarController', ['$scope', '$window', 'in
     function ($scope, $window, insertcar) {
 
         $("#loader").fadeOut();
+        $(".loader").fadeOut();
         $scope.digits = {};
         $scope.addDetailCancel = function(){
 
@@ -12,6 +13,7 @@ autoscityControllers.controller('insertCarController', ['$scope', '$window', 'in
        var images = [];
 
         $('body').on('change', '#image', function (e) {
+            $(".loader").fadeIn();
 
             e.preventDefault();
             var formData = new FormData($(this).parents('form')[0]);
@@ -23,6 +25,7 @@ autoscityControllers.controller('insertCarController', ['$scope', '$window', 'in
                     return myXhr;
                 },
                 success: function (data) {
+                    $(".loader").fadeOut();
                     $.toaster({
                         priority: 'success',
                         title: 'Alert',
