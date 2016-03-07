@@ -60,8 +60,8 @@ autoscityControllers.controller('carDetailController', ['$scope', '$window','det
                 }
             });
             //$("#loader").fadeOut("fast");
-           /* $scope.productDetailData = response.data;
-            console.log('product Detail Data : ' +JSON.stringify($scope.productDetailData));*/
+            /* $scope.productDetailData = response.data;
+             console.log('product Detail Data : ' +JSON.stringify($scope.productDetailData));*/
         });
 
 
