@@ -4,7 +4,11 @@ autoscityControllers.controller('insertCarController', ['$scope', '$window', 'in
     function ($scope, $window, insertcar) {
 
         $("#loader").fadeOut();
+        $scope.digits = {};
+        $scope.addDetailCancel = function(){
 
+            $window.location.href = '#/home';
+        }
        var images = [];
 
         $('body').on('change', '#image', function (e) {

@@ -8,6 +8,7 @@
 @import "home.css";          /*For Car List Page*/
 @import "carDetail.css";          /*For Used car detail page*/
 @import "datatable.css";          /*For Used car detail page*/
+@import "bootstrap-datepicker.min.css";          /*For Used car detail page*/
 
 
 html, body {
@@ -125,5 +126,14 @@ ol, ul{
     padding-top: 0px !important;
 }
 
-font
+@media (min-width: 320px) and (max-width: 979px)
+{
+    .loginWrapper {
+        margin: 50px auto;
+        width:100%;
+        padding: 30px 40px 20px 40px;
+
+
+    }
+}
 

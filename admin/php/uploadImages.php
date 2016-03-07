@@ -23,7 +23,7 @@
 		$file_name = $j.".".$file_extension;
 		$target_path = $dirname.$file_name;
 		
-		if (($_FILES["file"]["size"][$i] < 1000000) && in_array($file_extension, $validextensions)) {
+		if (($_FILES["file"]["size"][$i] < 6000000) && in_array($file_extension, $validextensions)) {
 			//$img64 = file_get_contents($_FILES['file']['tmp_name'][$i]);
 			//$imgMain = base64_encode($img64);
 			//array_push($img64Array, $target_path);

@@ -22,9 +22,5 @@ autoscityControllers.controller('loginController', ['$scope', '$window', 'login'
                 $.toaster("Connection Problem ", 'Alert', 'danger');
             });
         };
-       /*$scope.logout = function(){
-            alert('hi');
-            var userData = $cookies.getObject('userData');
-            console.log('Cookies : ' +userData);
-        }*/
+
     }]);
