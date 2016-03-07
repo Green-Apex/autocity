@@ -27,13 +27,12 @@ autoscityServices.factory('getFilterByCriteria', ['$resource','webAppConstant',
 
     }]);
 
-/*autoscityServices.factory('getallproduct', ['$resource', 'webAppConstant',
+autoscityServices.factory('gethomepageproducts', ['$resource', 'webAppConstant',
 
     function ($resource, webAppConstant) {
-        return $resource(webAppConstant + 'product/:verb', {verb: 'getallproductlist',criteria:'@criteria',endIndex:'@endIndex',
-            max:'@max',min:'@min',sort:'@sort',startIndex:'@startIndex',status:'@status',type:'@type'
+        return $resource(webAppConstant + 'product/:verb', {verb: 'gethomepageproducts'
         }, {
             query: {method: "GET"}
         });
-    }]);*/
+    }]);
 

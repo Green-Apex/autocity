@@ -45,7 +45,8 @@
 				$error =  1;
 				rmdir($dirname);
 			}
-		} 
+			$message = 'Upload successfully';
+		}
 		else {     
 			$message = $file_name.' Invalid file Size or Type';
 			$error =  2;

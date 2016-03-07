@@ -1,3 +1,27 @@
+.sliderimage {
+    display: table;
+    width: 100%;
+    padding: 100px 0;
+    text-align: center;
+    background: url(../images/usedcar.jpg) no-repeat bottom center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    height: 499px;
+}
+.cdsliderimage {
+    display: table;
+    width: 100%;
+    padding: 100px 0;
+    text-align: center;
+    background: url(../images/carDetail.jpg) no-repeat bottom center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    height: 499px;
+}
 
 .box {
     background:#fff;
