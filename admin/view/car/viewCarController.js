@@ -1,7 +1,7 @@
 'use strict';
 
-autoscityControllers.controller('viewCarController', ['$scope', '$window', 'getallproducts', '$location', 'deleteproduct',
-    function ($scope, $window, getallproducts, $location, deleteproduct) {
+autoscityControllers.controller('viewCarController', ['$scope', '$window', 'getallproducts', '$location', 'deleteproduct', 'checkforhome',
+    function ($scope, $window, getallproducts, $location, deleteproduct, checkforhome) {
 
         $("#loader").fadeOut();
 
@@ -27,8 +27,37 @@ autoscityControllers.controller('viewCarController', ['$scope', '$window', 'geta
             status:$scope.status,
             type:$scope.type
         }, function (response) {
+
             angular.forEach(response.data, function (value, key) {
-                $scope.productlist.push(value);
+                if(value.isHome == true){
+                    $scope.productlist.push({
+                        "productID": value.productID,
+                        "productName": value.productName,
+                        "model": value.model,
+                        "fuelType": value.fuelType,
+                        "engineSize": value.engineSize,
+                        "colour": value.colour,
+                        "avalability": value.avalability,
+                        "price": value.price,
+                        "isHome": false,
+                        "visible": "Show"
+                    });
+                }
+                else{
+                    $scope.productlist.push({
+                        "productID": value.productID,
+                        "productName": value.productName,
+                        "model": value.model,
+                        "fuelType": value.fuelType,
+                        "engineSize": value.engineSize,
+                        "colour": value.colour,
+                        "avalability": value.avalability,
+                        "price": value.price,
+                        "isHome": false,
+                        "visible": "Hide"
+                    });
+                }
+
             });
         });
 
@@ -40,4 +69,84 @@ autoscityControllers.controller('viewCarController', ['$scope', '$window', 'geta
                 $window.location.href = "#/viewCar?criteria=&endIndex=5000&max=&min=&sort=&startIndex=0&status=&type="
             })
         };
+
+        $scope.futureCar = function (productID,visible){
+            var falg = $scope.productlist;
+            $scope.productlist = [];
+            if(visible == 'Hide'){
+                angular.forEach(falg, function (value, key) {
+                    if(value.productID == productID){
+                        $scope.productlist.push({
+                            "productID": value.productID,
+                            "productName": value.productName,
+                            "model": value.model,
+                            "fuelType": value.fuelType,
+                            "engineSize": value.engineSize,
+                            "colour": value.colour,
+                            "avalability": value.avalability,
+                            "price": value.price,
+                            "isHome": true,
+                            "visible": "Show"
+                        });
+                        checkforhome.get({productID : productID, ishome : true},function(response){
+
+                        }, function () {
+
+                        });
+                    }
+                    else{
+                        $scope.productlist.push({
+                            "productID": value.productID,
+                            "productName": value.productName,
+                            "model": value.model,
+                            "fuelType": value.fuelType,
+                            "engineSize": value.engineSize,
+                            "colour": value.colour,
+                            "avalability": value.avalability,
+                            "price": value.price,
+                            "isHome": value.isHome,
+                            "visible": value.visible
+                        });
+                    }
+                });
+
+            }
+            else{
+                angular.forEach(falg, function (value, key) {
+                    if(value.productID == productID){
+                        $scope.productlist.push({
+                            "productID": value.productID,
+                            "productName": value.productName,
+                            "model": value.model,
+                            "fuelType": value.fuelType,
+                            "engineSize": value.engineSize,
+                            "colour": value.colour,
+                            "avalability": value.avalability,
+                            "price": value.price,
+                            "isHome": false,
+                            "visible": "Hide"
+                        });
+                        checkforhome.get({productID : productID, ishome : false},function(response){
+
+                        }, function () {
+
+                        });
+                    }
+                    else{
+                        $scope.productlist.push({
+                            "productID": value.productID,
+                            "productName": value.productName,
+                            "model": value.model,
+                            "fuelType": value.fuelType,
+                            "engineSize": value.engineSize,
+                            "colour": value.colour,
+                            "avalability": value.avalability,
+                            "price": value.price,
+                            "isHome": value.isHome,
+                            "visible": value.visible
+                        });
+                    }
+                });
+            }
+        }
     }]);

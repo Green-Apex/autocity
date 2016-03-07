@@ -219,113 +219,34 @@
             <li class="list-group-item  maroon text-center"><b>Feature car</b></li>
         </ul>
         <div class="row">
-            <div class="col-md-3">
-
+            <div class="col-md-3" ng-repeat="productlist in productlist">
                 <div class="panel panel-default">
                     <div class="thumbnail">
-                        <a href="#/carDetail?productID={{car.productID}}">
+                        <a href="#/carDetail?productID={{productlist.productID}}">
                             <div class="caption">
                                 <b></b>
-                                <p><i class="fa fa-mobile"></i> WHITE, 6 doors, Manual, Diesel</p>
-                                <p><i class="fa fa-cube"></i> Warranted, VAT Type: Commercial</p>
-                                <p><i class="fa fa-arrow-right"></i> FL07ODM</p>
-                                <p><i class="fa fa-star"></i> Registration Date 07/03/2007</p>
+                                <p><i class="fa fa-mobile"></i> {{productlist.colour}}, {{productlist.colour}} {{productlist.doors}} doors, {{productlist.transmission}}, {{productlist.fuelType}}</p>
+                                <p><i class="fa fa-cube"></i> {{productlist.warrenty}}, VAT Type: {{productlist.vatType}}</p>
+                                <p><i class="fa fa-arrow-right"></i> {{productlist.model}}</p>
+                                <p><i class="fa fa-star"></i> Registration Date {{productlist.carRegistrationDate}}</p>
                             </div>
                         </a>
-                        <img src="assets/images/FL07-01.jpg" alt="...">
-                    </div>
-                    <div class="panel-body">
-
-                        <div class="row pad10">
-                            <p>VAUXHALL VIVARO 2.9T 19 CDTI 100 SWB Panel Van</p>
-                            <p>103684 miles,</p>
-                            <p class="pull-left"><b>£3500</b></p>
-                            <p class="pull-right"><a href="" class="font_maroon"> Details <i
-                                    class="fa fa-arrow-right"></i></a></p>
-
-                        </div>
-                    </div>
-                    <div class="maroon"><a href="">Finance This Car From 159 Per Month</a></div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="panel panel-default">
-                    <div class="thumbnail">
-                        <a href="">
-                            <div class="caption">
-                                <b></b>
-                                <p><i class="fa fa-mobile"></i> BLUE, 5 doors, Manual, Diesel</p>
-                                <p><i class="fa fa-arrow-right"></i> Warranted, VAT Type: Commercial</p>
-                                <p><i class="fa fa-cube"></i> KE07OBZ</p>
-                                <p><i class="fa fa-star"></i>Registration Date 22/05/2007</p>
-                            </div>
-                        </a>
-                        <img src="assets/images/KE07-05.jpg" alt="...">
+                        <img src="{{productlist.img.small100[0]}}" alt="no img" style="height: 150px;width:150px">
                     </div>
                     <div class="panel-body">
                         <div class="row pad10">
-
-                            <p>FORD TRANSIT 280 22 TDCI 110 MWB M/R Panel Van</p>
-                            <p> 82735 miles</p>
-                            <p class="pull-left"><b>£4100</b></p>
-                            <p class="pull-right"><a href="" class="font_maroon"> Details <i
-                                    class="fa fa-arrow-right"></i></a></p>
-
-                        </div>
-                    </div>
-                    <div class="maroon"><a href="">Finance This Car From 159 Per Month</a></div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="panel panel-default">
-                    <div class="thumbnail">
-                        <a href="">
-                            <div class="caption">
-                                <b></b>
-                                <p><i class="fa fa-mobile"></i>BLUE, 5 doors, Manual, Diesel</p>
-                                <p><i class="fa fa-arrow-right"></i> Not warranted, VAT Type: Marginal</p>
-                                <p><i class="fa fa-cube"></i> BJ57MZG</p>
-                            </div>
-                        </a>
-                        <img src="assets/images/BJ07-01.jpg" alt="...">
-                    </div>
-                    <div class="panel-body">
-                        <div class="row pad10">
-                            <p>BMW 118D 20 M SPORT Hatchback </p>
-                            <p> 119974 miles</p>
-                            <p class="pull-left"><b>£5400</b></p>
-                            <p class="pull-right"><a href="" class="font_maroon"> Details <i
+                            <p>{{productlist.keyFeatures}}</p>
+                            <p>{{productlist.mileage}} miles,</p>
+                            <p class="pull-left"><b>£{{productlist.price}}</b></p>
+                            <p class="pull-right"><a href="#/carDetail?productID={{productlist.productID}}" class="font_maroon"> Details <i
                                     class="fa fa-arrow-right"></i></a></p>
                         </div>
                     </div>
                     <div class="maroon"><a href="">Finance This Car From 159 Per Month</a></div>
+                    <p>{{msg}}</p>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="panel panel-default">
-                    <div class="thumbnail">
-                        <a href="">
-                            <div class="caption">
-                                <b></b>
-                                <p><i class="fa fa-mobile"></i> APOLLO WHITE, 5 doors, Manual, Diesel</p>
-                                <p><i class="fa fa-arrow-right"></i> Warranted, VAT Type:Commercial</p>
-                                <p><i class="fa fa-cube"></i> MJ60 KOH</p>
-                            </div>
-                        </a>
-                        <img src="assets/images/MJ60-01.jpg" alt="...">
-                    </div>
-                    <div class="panel-body">
-                        <div class="row pad10">
-                            <p>RENAULT TRAFIC 2.7T 20 SL27DCI 115 Panel Van </p>
-                            <p>117845 miles</p>
-                            <p class="pull-left"><b>£4325</b></p>
-                            <p class="pull-right"><a href="" class="font_maroon"> Details <i
-                                    class="fa fa-arrow-right"></i></a></p>
-                        </div>
-                    </div>
-                    <div class="maroon"><a href="">Finance This Car From 159 Per Month</a></div>
-                </div>
-            </div>
+
         </div>
 
         <ul class="list-group material_list_group maroon">

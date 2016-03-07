@@ -4,6 +4,7 @@ autoscityControllers.controller('insertCarController', ['$scope', '$window', 'in
     function ($scope, $window, insertcar) {
 
         $("#loader").fadeOut();
+
        var images = [];
 
         $('body').on('change', '#image', function (e) {
@@ -18,6 +19,11 @@ autoscityControllers.controller('insertCarController', ['$scope', '$window', 'in
                     return myXhr;
                 },
                 success: function (data) {
+                    $.toaster({
+                        priority: 'success',
+                        title: 'Alert',
+                        message: 'Uploaded Successfully'
+                    });
                     var obj = JSON.parse(data);
 
                     var small100 = [];

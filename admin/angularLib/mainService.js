@@ -47,3 +47,10 @@ autoscityServices.factory('deleteproduct', ['$resource', 'webAppConstant',
             query: {method: "Post"}
         });
     }]);
+
+autoscityServices.factory('checkforhome', ['$resource','webAppConstant',
+    function($resource,webApp){
+        return $resource(webApp + "product/" + ':verb', {verb:'checkforhome', productID:"@productID", ishome:"@ishome"}, {
+            query: { method: "GET"}
+        });
+    }]);

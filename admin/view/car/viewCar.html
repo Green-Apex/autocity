@@ -36,6 +36,10 @@
                     <td>
                         <button class="btn btn-warning" ng-click="removeProduc(productlist.productID)">Delete</button>
                     </td>
+                    <td>
+                        <button class="btn btn-warning" ng-click="futureCar(productlist.productID,productlist.visible)">{{productlist.visible}}</button>
+                        <!--<button class="btn btn-warning" ng-click="futureCar(productlist.productID,productlist.isHome)" ng-show="going">Show</button>-->
+                    </td>
                 </tr>
                 </tbody>
             </table>
