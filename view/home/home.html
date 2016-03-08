@@ -107,7 +107,7 @@
                         <img src="{{productlist.img.small100[0]}}" alt="no img" style="height: 150px;width:150px">
                     </div>
                     <div class="panel-body">
-                        <div class="row pad10">
+                        <div class="row pad10" style="height: 100px;overflow-y: scroll">
                             <p>{{productlist.keyFeatures}}</p>
 
                             <p>{{productlist.mileage}} miles,</p>
@@ -119,8 +119,8 @@
                                     class="fa fa-arrow-right"></i></a></p>
                         </div>
                     </div>
-                    <div class="maroon"><a href="">Finance This Car From 159 Per Month</a></div>
-                    <p>{{msg}}</p>
+                    <div class="maroon"><a href="#/carDetail?productID={{productlist.productID}}">{{productlist.productName}}</a></div>
+
                 </div>
             </div>
 
