@@ -4,6 +4,12 @@ autoscityControllers.controller('EditAllProductsController', ['$scope', '$window
     function ($scope, $window, $location, detailProduct, updateproduct) {
 
         $("#loader").fadeOut();
+        $(".ajax-spinner-bars").fadeOut();
+        $scope.digits = {};
+        $scope.addDetailCancel = function(){
+
+            $window.location.href = '#/home';
+        }
 
         var images = [];
 
@@ -47,6 +53,8 @@ autoscityControllers.controller('EditAllProductsController', ['$scope', '$window
 
 
         $('body').on('change', '#image', function (e) {
+            $(".ajax-spinner-bars").fadeIn();
+
 
             e.preventDefault();
             var formData = new FormData($(this).parents('form')[0]);
@@ -58,6 +66,13 @@ autoscityControllers.controller('EditAllProductsController', ['$scope', '$window
                     return myXhr;
                 },
                 success: function (data) {
+                    $(".ajax-spinner-bars").fadeOut();
+                    $.toaster({
+                        priority: 'success',
+                        title: 'Alert',
+                        message: 'Uploaded Successfully'
+                    });
+
                     var obj = JSON.parse(data);
 
                     var small100 = [];
