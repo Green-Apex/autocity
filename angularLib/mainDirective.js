@@ -16,50 +16,7 @@ autoscityApp.directive('deskHeader', function () {
                 $("#menuButton").click(function(){$('.menubar').css('display') == 'none'? $('.menubar').css('display','block'): $('.menubar').css('display','none')});
 
 
-                /* $scope.menuData = [];
 
-                 getSession.get(function (response) {
-                     if (response.userType == "user") {
-                         $scope.menuData.push(
-                             {
-                                 title: "Profile",
-                                 url: "#/userProfile"
-                             },
-                             {
-                                 title: "Product List",
-                                 url: "#/productList?searchkey=&cuisine=&ingredient=&type=&nearBy="
-                             }
-                         );
-                     }
-                     else {
-                         $scope.menuData.push(
-                             {
-                                 title: "Home",
-                                 url: "#/home"
-                             },
-                             {
-                                 title: "Profile",
-                                 url: "#/userProfile"
-                             },
-                             {
-                                 title: "Add Event/Product",
-                                 url: "#/addEditEvent"
-                             }
-                         );
-                     }
-
-                     $scope.firstName = response.firstName;
-                 });
-
-                 $scope.userSignout = function () {
-                     $("#loader").fadeIn();
-                     removeSession.get(function (response) {
-                         $window.location.href = "#/login";
-                         $("#loader").fadeOut();
-                     });
-
-
-                 }*/
             }]
     }
 });
