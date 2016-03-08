@@ -1,18 +1,33 @@
 @import url(https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic);
-@import "loader.css";           /*For Loader on index page*/
-@import "header.css";           /*For Header*/
-@import "menu.css";             /*For Megamenu*/
-@import "footer.css";           /*For Footer*/
-@import "icons.css";            /*For Fontawesome & Glyphicons icons*/
-@import "inputControle.css";    /*For input & button on home page*/
-@import "home.css";          /*For Car List Page*/
-@import "carList.css";          /*For Car List Page*/
-@import "contactUs.css";          /*For Contact Us Page*/
-@import "finance.css";          /*For Finance Page*/
-@import "financeDeals.css";          /*For Finance Deals Page*/
-@import "etalage.css";          /*For Used car detail page zoomer image Page*/
-@import "carDetail.css";          /*For Used car detail page*/
-@import "bootstrap-select.min.css";          /*For Used car detail page*/
+@import "loader.css";
+/*For Loader on index page*/
+@import "header.css";
+/*For Header*/
+@import "menu.css";
+/*For Megamenu*/
+@import "footer.css";
+/*For Footer*/
+@import "icons.css";
+/*For Fontawesome & Glyphicons icons*/
+@import "inputControle.css";
+/*For input & button on home page*/
+@import "home.css";
+/*For Car List Page*/
+@import "carList.css";
+/*For Car List Page*/
+@import "contactUs.css";
+/*For Contact Us Page*/
+@import "finance.css";
+/*For Finance Page*/
+@import "financeDeals.css";
+/*For Finance Deals Page*/
+@import "etalage.css";
+/*For Used car detail page zoomer image Page*/
+@import "carDetail.css";
+/*For Used car detail page*/
+@import "bootstrap-select.min.css";
+
+/*For Used car detail page*/
 
 html, body {
     margin: 0;
@@ -26,13 +41,14 @@ a:hover {
     text-decoration: none;
     color: #87261D
 }
+
 a {
-    color:white !important;
-}
-ol, ul{
-    margin: 0px;
+    color: white !important;
 }
 
+ol, ul {
+    margin: 0px;
+}
 
 /*------------------------------------------------------login section*/
 .loginWrapper {
@@ -75,57 +91,58 @@ ol, ul{
 /*--------------------------------for panel hover effects----*/
 
 .thumbnail {
-    position:relative;
-    overflow:hidden;
+    position: relative;
+    overflow: hidden;
 }
 
 .caption {
-    position:absolute;
-    top:-100%;
-    right:0;
-    background:#D3AF8E;
+    position: absolute;
+    top: -100%;
+    right: 0;
+    background: #D3AF8E;
     opacity: 0.89;
-    width:100%;
-    height:100%;
-    padding:2%;
-    text-align:left;
-    color:#87261D !important;
-    z-index:2;
+    width: 100%;
+    height: 100%;
+    padding: 2%;
+    text-align: left;
+    color: #87261D !important;
+    z-index: 2;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     -ms-transition: all 0.5s ease-in-out;
 
 }
+
 .thumbnail:hover .caption {
-    top:0%;
+    top: 0%;
 }
-.pad10
-{
+
+.pad10 {
     padding-left: 10px;
     padding-right: 10px;
 }
-.font_blue
-{
-    color:#46B3DE;
+
+.font_blue {
+    color: #46B3DE;
 }
 
-.maroon
-{
+.maroon {
     background-color: #87261D;
     color: white;
     padding: 5px;
 }
-.blue
-{
+
+.blue {
     background-color: #46B3DE;
     color: white;
     padding: 5px;
 }
-.panel-body
-{
+
+.panel-body {
     padding-top: 0px !important;
 }
+
 .psliderimage {
 
     display: table;
@@ -139,6 +156,7 @@ ol, ul{
     -o-background-size: cover;
     height: 599px;
 }
+
 .resliderimage {
     display: table;
     width: 100%;
@@ -151,6 +169,7 @@ ol, ul{
     -o-background-size: cover;
     height: 499px;
 }
+
 .wsliderimage {
     display: table;
     width: 100%;
@@ -164,3 +183,9 @@ ol, ul{
     height: 499px;
 }
 
+.crop {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+}

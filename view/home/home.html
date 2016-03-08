@@ -107,19 +107,16 @@
                         <img src="{{productlist.img.small100[0]}}" alt="no img" style="height: 150px;width:150px">
                     </div>
                     <div class="panel-body">
-                        <div class="row pad10" style="height: 100px;overflow-y: scroll">
-                            <p>{{productlist.keyFeatures}}</p>
-
+                        <div class="row pad10" >
+                            <p> {{productlist.model}}</p>
                             <p>{{productlist.mileage}} miles,</p>
-
                             <p class="pull-left"><b>£{{productlist.price}}</b></p>
-
                             <p class="pull-right"><a href="#/carDetail?productID={{productlist.productID}}"
                                                      class="font_maroon"> Details <i
                                     class="fa fa-arrow-right"></i></a></p>
                         </div>
                     </div>
-                    <div class="maroon"><a href="#/carDetail?productID={{productlist.productID}}">{{productlist.productName}}</a></div>
+                    <div class="maroon crop"><a href="#/carDetail?productID={{productlist.productID}}">{{productlist.productName}}</a></div>
 
                 </div>
             </div>
