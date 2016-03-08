@@ -9,14 +9,12 @@
             <div class="col-md-3 carInfoFormleft">
                 <h4 class="text-center">FIND MAKE / MODEL</h4>
                 <div class="panel-body">
-
-                        <select class="select" ng-model="filterlist" ng-options="y for y in filterData.model" ng-change="GetValue(filterlist)">
+                    <div class="form-group">
+                        <select class="form-control" ng-model="filterlist" ng-options="y for y in filterData.model" ng-change="GetValue(filterlist)">
                         </select>
+                    </div>
+                    <h4 class="text-center">VEHICLE PRICE</h4>
 
-
-                </div>
-                <h4 class="text-center">VEHICLE PRICE</h4>
-                <div class="panel-body">
                     <div class="form-group">
                         <input class="form-control"  ng-model="minPrice" name="minPrice" type="text">
                     </div>
@@ -26,7 +24,9 @@
 
 
                     <button ng-click="GetValue(minPrice,maxPrice)" class="btn btn-default btn-block material_btn material_btn_info">Go</button>
+
                 </div>
+
             </div>
             <div class="col-md-9">
                 <div class="carInfoFormright">
@@ -73,143 +73,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <!--<div class="post-list">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="thumbnail">
-                                            <a href="#/carDetail">
-                                                <div class="caption">
-                                                    <b></b>
 
-                                                    <p><i class="fa fa-mobile"></i> GREY, 5 doors, Manual, Diesel</p>
-
-                                                    <p><i class="fa fa-cube"></i> Warranted, VAT Type: Marginal</p>
-
-                                                    &lt;!&ndash;   <p><i class="fa fa-arrow-right"></i> Leather</p>
-
-                                                       <p><i class="fa fa-star"></i> Bluetooth</p>&ndash;&gt;
-                                                </div>
-                                            </a>
-                                            <div class="ribbon-content">
-                                                <div class="ribbon base"><span>Sold</span></div>
-                                            </div>
-                                            <img src="assets/images/YJ07-02.jpg" alt="...">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <h4>
-                                            <a href="#/carDetail" class="username font_maroon">BMW 118D 20 SE
-                                                Hatchback </a>
-                                            <label class="label maroon">#Hatchback</label>
-                                            <label class="label maroon">#BMW</label>
-
-
-                                        </h4>
-                                        <h5>
-                                            <i class="fa fa-calendar"></i>
-                                            Feb 16
-                                        </h5>
-                                        <p class="description">GREY, 5 doors, Manual, Diesel, 141740 miles, Warranted,
-                                            VAT Type: Marginal, YJ07
-                                            ACM, Registration Date 30/07/2007</p>
-                                    </div>
-                                    <div class="col-md-2" data-no-turbolink="">
-                                        <a class="btn btn-info1 btn-download btn-round pull-right makeLoading font_maroon"
-                                           href="#/carDetail">
-                                            <i class="fa fa-share"></i> View
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="post-list">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="thumbnail">
-                                            <a href="#/carDetail">
-                                                <div class="caption">
-                                                    <b></b>
-
-                                                  <p><i class="fa fa-mobile"></i>BLUE, 5 doors, Manual, Diesel</p>
-
-                                                    <p><i class="fa fa-arrow-right"></i> Not warranted, VAT Type:
-                                                        Marginal</p>
-
-                                                    <!--  <p><i class="fa fa-arrow-right"></i> Leather</p>
-
-                                                      <p><i class="fa fa-star"></i> Bluetooth</p>
-                                                </div>
-                                            </a>
-                                            <div class="ribbon-content">
-                                                <div class="ribbon orange"><span>Availaible</span></div>
-                                            </div>
-                                            <img src="assets/images/BJ07-01.jpg" alt="...">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <h4>
-                                            <a href="#/carDetail" class="username font_maroon">BMW 118D 20 M SPORT
-                                                Hatchback</a>
-                                            <label class="label maroon">#BMW</label>
-                                        </h4>
-                                        <h5>
-                                            <i class="fa fa-calendar"></i>
-                                            Feb 16
-                                        </h5>
-                                        <p class="description">BLUE, 5 doors, Manual, Diesel, 119974 miles, Not
-                                            warranted, VAT Type: Marginal, BJ57
-                                            MZG</p>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <a class="btn btn-info1 btn-download btn-round pull-right makeLoading font_maroon"
-                                           href="#/carDetail">
-                                            <i class="fa fa-share"></i> View
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="post-list">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="thumbnail">
-                                            <a href="#/carDetail">
-                                                <div class="caption">
-                                                    <b></b>
-
-                                                    <p><i class="fa fa-mobile"></i> WHITE, 6 doors, Manual, Diesel</p>
-
-                                                    <p><i class="fa fa-cube"></i> Warranted, VAT Type: Commercial</p>
-                                                </div>
-                                            </a>
-                                            <div class="ribbon-content">
-                                                <div class="ribbon orange"><span>Availaible</span></div>
-                                            </div>
-                                            <img src="assets/images/FL07-01.jpg" alt="...">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <h4>
-                                            <a href="#/carDetail" class="username font_maroon">VAUXHALL VIVARO 2.9T 19
-                                                CDTI 100 SWB Panel Van </a>
-                                            <label class="label maroon">#VAN</label>
-                                            <label class="label maroon">#VAUXHALL</label>
-                                        </h4>
-                                        <h5>
-                                            <i class="fa fa-calendar"></i>
-                                            Feb 15
-                                        </h5>
-                                        <p class="description">WHITE, 6 doors, Manual, Diesel, 103684 miles, Warranted,
-                                            VAT Type: Commercial, FL07
-                                            ODM, Registration Date 07/03/2007</p>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <a class="btn btn-info1 btn-download btn-round pull-right makeLoading font_maroon"
-                                           href="#/carDetail">
-                                            <i class="fa fa-share"></i> View
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>-->
                         </div>
                     </div>
 

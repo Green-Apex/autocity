@@ -6,174 +6,37 @@
             <div class="row">
                 <div class="carInfoForm col-md-4">
                     <h3 class="text-center">Find new & used cars</h3>
+
                     <div class="row">
                         <form novalidate name="modelFilter">
                             <div>
                                 <h4 class="text-center">FIND MAKE / MODEL</h4>
-                                <div class="panel-body">
-                                    <select class="select" name="filterlist" ng-model="filterlist" ng-options="y for y in filterData.model" required>
-                                    </select>
-                                </div>
-                                <h4 class="text-center">VEHICLE PRICE</h4>
+
                                 <div class="panel-body">
                                     <div class="form-group">
-                                        <input class="form-control"  ng-model="minPrice" name="minPrice" type="text" placeholder="0" required>
+                                        <select class=" form-control" name="filterlist" ng-model="filterlist"
+                                                ng-options="y for y in filterData.model" required>
+                                        </select>
+                                    </div>
+                                    <h4 class="text-center">VEHICLE PRICE</h4>
+
+                                    <div class="form-group text-center">
+                                        <input class="form-control" ng-model="minPrice" name="minPrice" type="text"
+                                               placeholder="0" required>
                                     </div>
                                     <div class="form-group">
-                                        <input class="form-control" ng-model="maxPrice" name="maxPrice" type="text" placeholder="0" required>
+                                        <input class="form-control" ng-model="maxPrice" name="maxPrice" type="text"
+                                               placeholder="0" required>
                                     </div>
-                                    <a href="#/carList?criteria=model:{{filterlist}}&endIndex=100&max={{maxPrice}}&min={{minPrice}}&sort=&startIndex=0&status=&type=" class="btn btn-default btn-block material_btn material_btn_info" ng-hide="modelFilter.$invalid">Go</a>
+                                    <a href="#/carList?criteria=model:{{filterlist}}&endIndex=100&max={{maxPrice}}&min={{minPrice}}&sort=&startIndex=0&status=&type="
+                                       class="btn btn-default btn-block material_btn material_btn_info"
+                                       ng-hide="modelFilter.$invalid">Go</a>
+
                                 </div>
+
                             </div>
-                            </form>
-                           <!-- <div class="col-md-12">
-                                <div class="form-group">
-                                    <div class="dropdown material_dropdown">
-                                        <button class="dropdown-toggle material_dropdown_btn" type="button" id=""
-                                                data-toggle="dropdown" aria-expanded="true">
-                                            Distance(select)
-                                            <span class="caret"></span>
-                                        </button>
-                                        <ul class="dropdown-menu material_dropdown_menu" role="menu"
-                                            aria-labelledby="dropdownMenu1">
-                                            <li>
-                                                <input type="checkbox">
-                                                <span> Within 1</span>
-                                            </li>
-                                            <li>
-                                                <input type="checkbox">
-                                                <span> Within 2</span>
-                                            </li>
-                                            <li>
-                                                <input type="checkbox">
-                                                <span> Within 3</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="dropdown material_dropdown">
-                                        <button class="dropdown-toggle material_dropdown_btn" type="button"
-                                                id="dropdownMenu1"
-                                                data-toggle="dropdown" aria-expanded="true">
-                                            Show(select)
-                                            <span class="caret"></span>
-                                        </button>
-                                        <ul class="dropdown-menu material_dropdown_menu" role="menu"
-                                            aria-labelledby="dropdownMenu1">
-                                            <li>
-                                                <input type="checkbox">
-                                                <span> Used</span>
-                                            </li>
-                                            <li>
-                                                <input type="checkbox">
-                                                <span> Nearly</span>
-                                            </li>
-                                            <li>
-                                                <input type="checkbox">
-                                                <span> New</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="dropdown material_dropdown">
-                                        <button class="dropdown-toggle material_dropdown_btn" type="button"
-                                                id="dropdownMenu1"
-                                                data-toggle="dropdown" aria-expanded="true">
-                                            Make(any)
-                                            <span class="caret"></span>
-                                        </button>
-                                        <ul class="dropdown-menu material_dropdown_menu" role="menu"
-                                            aria-labelledby="dropdownMenu1">
-                                            <li>
-                                                <input type="checkbox">
-                                                <span> Used</span>
-                                            </li>
-                                            <li>
-                                                <input type="checkbox">
-                                                <span>Nearly</span>
-                                            </li>
-                                            <li>
-                                                <input type="checkbox">
-                                                <span> New</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="dropdown material_dropdown">
-                                        <button class="dropdown-toggle material_dropdown_btn" type="button"
-                                                id="dropdownMenu1"
-                                                data-toggle="dropdown" aria-expanded="true">
-                                            Model(any)
-                                            <span class="caret"></span>
-                                        </button>
-                                        <ul class="dropdown-menu material_dropdown_menu" role="menu"
-                                            aria-labelledby="dropdownMenu1">
-                                            <li>
-                                                <input type="checkbox">
-                                                <span> Used</span>
-                                            </li>
-                                            <li>
-                                                <input type="checkbox">
-                                                <span> Nearly</span>
-                                            </li>
-                                            <li>
-                                                <input type="checkbox">
-                                                <span> New</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="form-group materail_input_block">
-                                        <input type="text" class="form-control materail_input" placeholder="postcode">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <button class="btn btn-default btn-block material_btn material_btn_xs material_btn_info "
-                                            type="button"
-                                            data-toggle="dropdown">
-                                        save
-                                    </button>
-                                </div>
-                                <p>Can’t find what you’re looking for? <span><a href=""
-                                                                                style="color:maroon !important;">Click
-                                    here</a></span> to fill our inquiry form</p>
-                            </div>-->
+                        </form>
 
-
-
-
-
-
-                            <!--     <div class="col-md-12">
-                                     <div class="form-group">
-                                         <select class="form-control select">
-                                             <option>Used</option>
-                                             <option>Nearly</option>
-                                             <option>New</option>
-                                         </select>
-                                     </div>
-                                     <div class="form-group">
-                                         <select class="form-control select">
-                                             <option>Make</option>
-                                             <option>Used</option>
-                                             <option>Nearly</option>
-                                             <option>New</option>
-                                         </select>
-                                     </div>
-                                     <div class="form-group">
-                                         <select class="form-control select">
-                                             <option>Model</option>
-                                             <option>Used</option>
-                                             <option>Nearly</option>
-                                             <option>New</option>
-                                         </select>
-                                     </div>
-
-                                 </div>-->
 
                         </form>
                     </div>
@@ -190,6 +53,7 @@
 
         <div class="carInfoFormright col-md-12">
             <p></p>
+
             <p class="text-justify">Welcome to Autos City, your own personal vehicle dealer. With over 3 years
                 combined dealer experience
                 and yours confidence in us, we as Autos City have built a great reputation on providing a courteous
@@ -197,12 +61,14 @@
                 honest services. The business is an independent, family run vehicle business offering first class
                 service in a friendly environment, where the dedicated team take great pride in providing complete
                 customer satisfaction.</p>
+
             <p class="text-justify">Our customers appreciate the way we do business, and we believe you will too.
                 For your complete peace of
                 mind we will ensure that the vehicle of your choice has been prepared and presented to exceed the
                 expectations of the most demanding vehicle customer. We are proud to say that Autos City stocks a
                 range
                 of used vehicles that suits your budget and lifestyle.</p>
+
             <p class="text-justify"> Our dedicated team take great pride in providing complete customer
                 satisfaction. The team members are
                 also happy to source any vehicles if you cannot find what you're looking for within the current
@@ -225,9 +91,16 @@
                         <a href="#/carDetail?productID={{productlist.productID}}">
                             <div class="caption">
                                 <b></b>
-                                <p><i class="fa fa-mobile"></i> {{productlist.colour}}, {{productlist.colour}} {{productlist.doors}} doors, {{productlist.transmission}}, {{productlist.fuelType}}</p>
-                                <p><i class="fa fa-cube"></i> {{productlist.warrenty}}, VAT Type: {{productlist.vatType}}</p>
+
+                                <p><i class="fa fa-mobile"></i> {{productlist.colour}}, {{productlist.colour}}
+                                    {{productlist.doors}} doors, {{productlist.transmission}}, {{productlist.fuelType}}
+                                </p>
+
+                                <p><i class="fa fa-cube"></i> {{productlist.warrenty}}, VAT Type:
+                                    {{productlist.vatType}}</p>
+
                                 <p><i class="fa fa-arrow-right"></i> {{productlist.model}}</p>
+
                                 <p><i class="fa fa-star"></i> Registration Date {{productlist.carRegistrationDate}}</p>
                             </div>
                         </a>
@@ -236,9 +109,13 @@
                     <div class="panel-body">
                         <div class="row pad10">
                             <p>{{productlist.keyFeatures}}</p>
+
                             <p>{{productlist.mileage}} miles,</p>
+
                             <p class="pull-left"><b>£{{productlist.price}}</b></p>
-                            <p class="pull-right"><a href="#/carDetail?productID={{productlist.productID}}" class="font_maroon"> Details <i
+
+                            <p class="pull-right"><a href="#/carDetail?productID={{productlist.productID}}"
+                                                     class="font_maroon"> Details <i
                                     class="fa fa-arrow-right"></i></a></p>
                         </div>
                     </div>
