@@ -5,15 +5,17 @@ autoscityControllers.controller('homeController', ['$scope', '$window', 'getFilt
 
         $("#loader").fadeOut();
 
+
+
         getFilterByCriteria.get(function (response) {
             $scope.filterData = response.data;
         });
 
-        gethomepageproducts.get(function(response){
-            if(response.data == ''){
+        gethomepageproducts.get(function (response) {
+            if (response.data == '') {
                 $scope.msg = "No Feature Car";
             }
-            else{
+            else {
                 $scope.productlist = response.data;
             }
         });

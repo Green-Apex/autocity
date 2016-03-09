@@ -1,53 +1,56 @@
 <desk-header xmlns="http://www.w3.org/1999/html"></desk-header>
 <desk-menubar></desk-menubar>
-<header class="intro">
-    <div class="intro-body">
-        <div class="container">
-            <div class="row">
-                <div class="carInfoForm col-md-4">
-                    <h3 class="text-center">Find new & used cars</h3>
 
-                    <div class="row">
-                        <form novalidate name="modelFilter">
-                            <div>
-                                <h4 class="text-center">FIND MAKE / MODEL</h4>
+    <div class="header-unit">
+        <div id="video-container">
 
-                                <div class="panel-body">
-                                    <div class="form-group">
-                                        <select class=" form-control" name="filterlist" ng-model="filterlist"
-                                                ng-options="y for y in filterData.model" required>
-                                        </select>
-                                    </div>
-                                    <h4 class="text-center">VEHICLE PRICE</h4>
+    <video poster="ocean.jpg" autoplay loop  class="fillWidth">
+        <source src="assets/video/The all-new BMW i8. Official Launch Video.(1).mp4" type="video/mp4">
+    </video>
+            </div>
+        </div>
 
-                                    <div class="form-group text-center">
-                                        <input class="form-control" ng-model="minPrice" name="minPrice" type="text"
-                                               placeholder="0" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <input class="form-control" ng-model="maxPrice" name="maxPrice" type="text"
-                                               placeholder="0" required>
-                                    </div>
-                                    <a href="#/carList?criteria=model:{{filterlist}}&endIndex=100&max={{maxPrice}}&min={{minPrice}}&sort=&startIndex=0&status=&type="
-                                       class="btn btn-default btn-block material_btn material_btn_info"
-                                       ng-hide="modelFilter.$invalid">Go</a>
+    <div class="carInfoForm col-md-3">
+        <h3 class="text-center">Find new & used cars</h3>
 
-                                </div>
+        <div class="row">
+            <form novalidate name="modelFilter">
+                <div>
+                    <h5 class="text-center">FIND MAKE / MODEL</h5>
 
-                            </div>
-                        </form>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <select class=" form-control" name="filterlist" ng-model="filterlist"
+                                    ng-options="y for y in filterData.model" required>
+                            </select>
+                        </div>
+                        <h5 class="text-center">VEHICLE PRICE</h5>
 
-
-                        </form>
+                        <div class="form-group text-center">
+                            <input class="form-control" ng-model="minPrice" name="minPrice" type="text"
+                                   placeholder="Min Price" required>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" ng-model="maxPrice" name="maxPrice" type="text"
+                                   placeholder="Max Price" required>
+                        </div>
+                        <a href="#/carList?criteria=model:{{filterlist}}&endIndex=100&max={{maxPrice}}&min={{minPrice}}&sort=&startIndex=0&status=&type="
+                           class="btn btn-default btn-block material_btn material_btn_info"
+                           ng-hide="modelFilter.$invalid">Go</a>
                     </div>
 
                 </div>
+            </form>
 
 
-            </div>
+            </form>
         </div>
+
     </div>
-</header>
+
+
+
+
 <section>
     <div class="container">
 
@@ -107,16 +110,20 @@
                         <img src="{{productlist.img.small100[0]}}" alt="no img" style="height: 150px;width:150px">
                     </div>
                     <div class="panel-body">
-                        <div class="row pad10" >
+                        <div class="row pad10">
                             <p> {{productlist.model}}</p>
+
                             <p>{{productlist.mileage}} miles,</p>
+
                             <p class="pull-left"><b>£{{productlist.price}}</b></p>
+
                             <p class="pull-right"><a href="#/carDetail?productID={{productlist.productID}}"
                                                      class="font_maroon"> Details <i
                                     class="fa fa-arrow-right"></i></a></p>
                         </div>
                     </div>
-                    <div class="maroon crop"><a href="#/carDetail?productID={{productlist.productID}}">{{productlist.productName}}</a></div>
+                    <div class="maroon crop"><a href="#/carDetail?productID={{productlist.productID}}">{{productlist.productName}}</a>
+                    </div>
 
                 </div>
             </div>
