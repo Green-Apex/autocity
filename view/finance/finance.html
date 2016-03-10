@@ -1,5 +1,19 @@
 <desk-header xmlns="http://www.w3.org/1999/html"></desk-header>
 <desk-menubar></desk-menubar>
+<style>
+    .help-block{
+        color:red !important;
+    }
+    .form-group1 div:after {
+        position:absolute;
+        content:'*';
+        color:red;
+        right:-10px;
+        top:0;
+    }
+
+
+</style>
 <header class="fsliderimage">
 
 </header>
@@ -30,6 +44,7 @@
                     <div class="panel panel-info">
                         <div class="panel-heading "><h4 class="text-center m">FINANCE CALCULATOR</h4></div>
                         <div class="panel-body">
+                            <form name="finance" novalidate>
                             <div class="finance_pad30T  "></div>
                             <label class="finance_mrg24L finance_mrg24R">My Credit Score is</label>
                             <select class="selectBox finance_mrg24L finance_mrg24R">
@@ -40,21 +55,35 @@
                             </select>
                             <div class="finance_pad30T"></div>
                             <label class="finance_mrg24L finance_mrg24R">I would like repay over</label>
-                            <select class="selectBox finance_mrg24L finance_mrg24R" ng-model="month">
+                            <select class="selectBox finance_mrg24L finance_mrg24R" ng-model="month" name="months" required>
                                 <option value="12 ">12 Months</option>
                                 <option value="36">36 Months</option>
                                 <option value="48">48 Months</option>
                                 <option value="60">60 Months</option>
                             </select>
+                                <div class="help-block finance_mrg24L                                                                                                                                                                                                                              "
+                                     ng-show="finance.months.$invalid && finance.months.$touched">
+                                    This Field Require.
+                                </div>
                             <div class="finance_pad30T"></div>
                             <label class="finance_mrg24L finance_mrg24R">I would Like to borrow</label>
                             <div class="form-group materail_input_block">
-                                <input type="text" class="form-control materail_input " placeholder="£7000" ng-model="modi">
+                                <input type="text" class="form-control materail_input " placeholder="£7000" ng-model="modi" name="borrow"  ng-pattern="/^(\d)+$/" required>
+
+                                <div class="help-block  finance_mrg24L"
+                                     ng-show="finance.borrow.$invalid &&  finance.borrow.$touched">
+                                    This Field Require & only insert number
+                                </div>
+
                             </div>
                             <div class="finance_pad30T"></div>
                             <label class="finance_mrg24L finance_mrg24R">Intrest</label>
                             <div class="form-group materail_input_block">
-                                <input type="text" class="form-control materail_input " placeholder="Intrest" ng-model="interest">
+                                <input type="text" class="form-control materail_input " placeholder="Intrest" ng-model="interest" name="interest" required ng-pattern="/[0-9]+/" >
+                                <div class="help-block finance_mrg24L"
+                                     ng-show="finance.interest.$invalid &&  finance.interest.$touched ">
+                                    This Field Require & only insert number.Not allow special symbol
+                                </div>
                             </div>
                             <div class="finance_pad15T"></div>
                             <div class="panel panel-footer finance_mrg24L finance_mrg24R">
@@ -74,11 +103,11 @@
                                 </table>
                             </div>
                             <button class="btn btn-default  material_btn material_btn_xs material_btn_info pull-right finance_mrg24L finance_mrg24R"
-                                    type="button" data-toggle="dropdown" ng-click="aprCalculation()">
+                                    type="button" data-toggle="dropdown" ng-click="aprCalculation()" ng-disabled="finance.$invalid">
                                 <b>Apply Now</b>
                             </button>
 
-
+</form>
                         </div>
                     </div>
 

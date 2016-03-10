@@ -5,6 +5,7 @@ autoscityControllers.controller('financeController', ['$scope', '$window',
 
         $("#loader").fadeOut();
 
+
         $scope.ratetotal = 0;
         $scope.TotalRepayment = 0;
         $scope.TotalCostofCredit = 0;
